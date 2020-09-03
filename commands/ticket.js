@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 var bool = false;
-const categoryId = "739152388916772904";
+const categoryId = "744300750221344920";
 const cooldown = new Set();
 
 module.exports = {
