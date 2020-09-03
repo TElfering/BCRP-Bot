@@ -12,7 +12,7 @@ module.exports = {
                 .setColor('#006FE4')
                 .setTitle('Bot Commands')
                 .setDescription('All commands for this Bot')
-                .setThumbnail('https://cdn.discordapp.com/attachments/697512426538795049/734805124769251329/1024px-092-robot-face-1.png')
+                .setThumbnail('https://cdn.discordapp.com/attachments/734776400321708053/751072941986545726/BCRP_LOGO_4K.png')
                 .addField('-ping', 'pong')
                 .addField('-bot', 'Bot information')
                 .addField('-eu', 'Pings EU')
