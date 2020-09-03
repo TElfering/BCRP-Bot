@@ -1,10 +1,11 @@
 const Discord = require('discord.js')
+const commandcooldown = new Set();
 
 module.exports = {
 	name: 'commandlist',
 	description: 'list of commands',
 	execute(message, args) {
-        if(nacooldown.has(message.guild.id)) {
+        if(commandcooldown.has(message.guild.id)) {
 			message.reply('You need to wait 20 Minutes');
 		}else {
 		const command = new Discord.MessageEmbed()
@@ -30,9 +31,9 @@ module.exports = {
             message.channel.send({
                 embed: command
             });
-            nacooldown.add(message.guild.id);
+            commandcooldown.add(message.guild.id);
 			setTimeout(() =>{
-				nacooldown.delete(message.guild.id)
+				commandcooldown.delete(message.guild.id)
             }, 1200000)
         }
 	},
