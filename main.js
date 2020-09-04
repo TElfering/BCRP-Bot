@@ -34,11 +34,11 @@ bot.on('ready', () => {
     bot.user.setActivity('Blue County RP™');
 })
 
-const discordChannelid = '720718795811061802'
 
-const discordChannel = message.guild.channels.cache.get(discordChannelid)
 
 bot.on("messageDelete", async message => {
+    const discordChannelid = '720718795811061802'
+    const discordChannel = message.guild.channels.cache.get(discordChannelid)
     let logs = await message.guild.fetchAuditLogs({type: 72});
     let entry = logs.entries.first();
 
