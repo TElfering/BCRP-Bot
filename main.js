@@ -71,7 +71,6 @@ bot.on("messageDelete", async message => {
 
 client.on('messageUpdate', (oldMessage, newMessage) => {
     discordChannel.send(`${oldMessage}`)
-    discordChannel.send(`${newMessage}`)
 })
 
 bot.on('guildMemberAdd', member => {
