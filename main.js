@@ -277,7 +277,7 @@ bot.on('message', async message => {
             .setTitle('Player Info')
             .setColor('#006FE4')
             .setThumbnail(playerarg.avatar)
-            .addField('Name:', playerarg.username)
+            .addField('Name:', `${playerarg.username}`)
             .addField('Discriminator:', playerarg.discriminator)
             .addField('ID:', playerarg.id)
             message.channel.send(playerEmbed)
