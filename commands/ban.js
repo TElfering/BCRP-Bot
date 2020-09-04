@@ -1,8 +1,4 @@
 const Discord = require('discord.js')
-const modRole = "699338419268091965";
-const SRmodRole = "705475312909025350";
-const AdminRole = "699337551772909638";
-const SRAdminRole = "699337218518548580";
 
 module.exports = {
     name: 'ban',
@@ -18,11 +14,11 @@ module.exports = {
 
         const staffChannel = message.guild.channels.cache.get(staffChannelid)
 
-        if (!modRole, SRmodRole, AdminRole, SRAdminRole) return;
+        if (!hadPerms) return;
         if (!reason) return message.reply('You need to give a reason')
 
         message.mentions.users.map(async user => {
-            if (message.member.role.cache.has(modRole, SRmodRole, AdminRole, SRAdminRole)) { } else return message.channel.send('Insufficient Permissions')
+            if (message.member.permissions.has('BAN_MEMBERS')) { } else return message.channel.send('Insufficient Permissions')
             const banEmbed = new Discord.MessageEmbed()
                 .setTitle('Banned')
                 .setColor('#006FE4')
