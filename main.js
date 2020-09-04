@@ -270,20 +270,6 @@ bot.on('message', async message => {
             client.commands.get('unwarn').execute(message, args, Discord);
             break;
 
-        case 'player':
-            const playerarg = message.guild.member(message.mentions.users.first())
-
-            const playerEmbed = new Discord.MessageEmbed()
-            .setTitle('Player Info')
-            .setColor('#006FE4')
-            .setThumbnail(playerarg.avatar)
-            .addField('Name:', `${message.mentions.users.first.username}`)
-            .addField('Discriminator:', playerarg.discriminator)
-            .addField('ID:', `${message.mentions.users.first.id}`)
-            message.channel.send(playerEmbed)
-        break;
-
-
         case 'react':
                 let reactionEmbed = new Discord.MessageEmbed()
                     .setTitle('__Blue County RP - Application__')
