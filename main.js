@@ -65,6 +65,7 @@ bot.on("messageDelete", async message => {
         .setFooter(`Message ID: ${message.id}`);
 
         if (message.partial) {
+            if (message.author.bot) return;
             discordChannel.send(deleteEmbedtwo)
         }else discordChannel.send(deleteEmbed)
   });
