@@ -34,13 +34,13 @@ bot.on('ready', () => {
     bot.user.setActivity('Blue County RP™');
 })
 
+const discordChannelid = '720718795811061802'
+
+const discordChannel = message.guild.channels.cache.get(discordChannelid)
+
 bot.on("messageDelete", async message => {
     let logs = await message.guild.fetchAuditLogs({type: 72});
     let entry = logs.entries.first();
-
-    const discordChannelid = '720718795811061802'
-
-    const discordChannel = message.guild.channels.cache.get(discordChannelid)
 
     const deleteEmbedtwo = new Discord.MessageEmbed()
         //.setAuthor(`${message.author.username}${message.author.discriminator}`, `${message.author.avatarURL()}`, 'https://bluecountyrp.net')
@@ -68,6 +68,11 @@ bot.on("messageDelete", async message => {
             discordChannel.send(deleteEmbedtwo)
         }else discordChannel.send(deleteEmbed)
   });
+
+client.on('messageUpdate', (oldMessage, newMessage) => {
+    discordChannel.send(`${oldMessage}`)
+    discordChannel.send(`${newMessage}`)
+})
 
 bot.on('guildMemberAdd', member => {
 
