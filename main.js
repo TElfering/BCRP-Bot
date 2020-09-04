@@ -35,7 +35,6 @@ bot.on('ready', () => {
 })
 
 bot.on("messageDelete", async message => {
-    if (message.author.bot) return;
     let logs = await message.guild.fetchAuditLogs({type: 72});
     let entry = logs.entries.first();
 
