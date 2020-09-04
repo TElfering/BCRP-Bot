@@ -69,10 +69,6 @@ bot.on("messageDelete", async message => {
         }else discordChannel.send(deleteEmbed)
   });
 
-client.on('messageUpdate', (oldMessage, newMessage) => {
-    discordChannel.send(`${oldMessage}`)
-})
-
 bot.on('guildMemberAdd', member => {
 
     const welcomechannel = member.guild.channels.cache.find(welcomechannel => welcomechannel.name === '💭general');
