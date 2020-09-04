@@ -29,7 +29,7 @@ module.exports = {
             message.reply('You need to wait 20 Seconds');
         }else {
         message.author.send(command)
-        message.delete()
+        message.delete({timeout: 500})
         message.reply('Commands has been send in you\'re dm\'s')
         .then(message => {
             message.delete({timeout: 5000})
