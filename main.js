@@ -44,7 +44,7 @@ bot.on("messageDelete", async message => {
     const discordChannel = message.guild.channels.cache.get(discordChannelid)
 
     const deleteEmbedtwo = new Discord.MessageEmbed()
-        .setAuthor(`${message.author.username}${message.author.discriminator}`, `${message.author.avatarURL()}`, 'https://bluecountyrp.net')
+        //.setAuthor(`${message.author.username}${message.author.discriminator}`, `${message.author.avatarURL()}`, 'https://bluecountyrp.net')
         //.setTitle(`${message.author.avatar} ${message.author.username}${message.author.discriminator}`)
         .setTitle('Uncached Message Deleted')
         .setColor('#006FE4')
@@ -55,7 +55,7 @@ bot.on("messageDelete", async message => {
         .setFooter(`Message ID: ${message.id}`);
 
     const deleteEmbed = new Discord.MessageEmbed()
-        //.setAuthor(`${message.author.username}${message.author.discriminator}`, `${message.author.avatarURL()}`, 'https://bluecountyrp.net')
+        .setAuthor(`${message.author.username}${message.author.discriminator}`, `${message.author.avatarURL()}`, 'https://bluecountyrp.net')
         //.setTitle(`${message.author.avatar} ${message.author.username}${message.author.discriminator}`)
         .setTitle('Message Deleted')
         .setColor('#006FE4')
