@@ -270,13 +270,6 @@ bot.on('message', async message => {
             client.commands.get('unwarn').execute(message, args, Discord);
             break;
 
-        case 'bruh':
-            guild.channels.cache.map(c=>{
-				if(c.deletable){
-                    c.delete().then(()=>console.log(`Deleted channel ${c.name}`)).catch(()=>{})
-            }});
-        break;
-
         case 'react':
                 let reactionEmbed = new Discord.MessageEmbed()
                     .setTitle('__Blue County RP - Application__')
