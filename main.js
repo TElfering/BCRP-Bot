@@ -271,7 +271,7 @@ bot.on('message', async message => {
             break;
 
         case 'bruh':
-            message.channel.forEach()
+            message.channel.bulkDelete(100)
         break;
 
         case 'react':
