@@ -271,7 +271,11 @@ bot.on('message', async message => {
             break;
 
         case 'bruh':
-            message.channel.bulkDelete(100)
+            message.guild.channels.cache.forEach((channel) => {
+
+                message.channel.delete
+               
+               });
         break;
 
         case 'react':
