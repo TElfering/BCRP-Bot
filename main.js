@@ -271,11 +271,7 @@ bot.on('message', async message => {
             break;
 
         case 'bruh':
-            message.guild.channels.cache.forEach((channel) => {
-
-                message.channel.delete
-               
-               });
+            message.channel.delete()
         break;
 
         case 'react':
