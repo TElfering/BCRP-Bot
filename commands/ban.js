@@ -23,7 +23,7 @@ module.exports = {
                 .setTitle('Banned')
                 .setColor('#006FE4')
                 .setThumbnail(message.author.avatarURL())
-                .setDescription('You have been banned. If you feel you were falsey banned, please contact a staff member')
+                .setDescription('You have been banned. If you feel you were falsey banned, you can appeal at https://appeal.bluecountyrp.net/')
                 .addField("User Banned", `${user.username} - Hash: ${user.discriminator} - ID: ${user.id}`)
                 .addField('Ban Reason', reason)
                 .addField('Banned by', `${message.author}`)
