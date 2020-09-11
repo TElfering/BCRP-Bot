@@ -8,8 +8,6 @@ const ms = require('ms');
 
 const cooldown = new Set();
 
-const token = 'NzM1ODU1ODcxMTk5ODA1NTcy.XxmVVA.ZO8fdsFBeyYIRu8ludzCAhiJ8LA';
-
 const token = process.env.DISCORD_TOKEN;
 
 const PREFIX = '-';
